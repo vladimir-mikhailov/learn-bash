@@ -10,7 +10,6 @@ for file in $1/*; do
         if [ ! -d $owner ]; then
             mkdir -v $owner
         fi
-        cp -v $file $owner
-        sudo chown -v $owner:$owner ./$owner/$file
+        sudo cp -avp $file $owner
     fi
 done
